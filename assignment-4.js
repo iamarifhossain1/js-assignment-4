@@ -17,18 +17,22 @@ function totalFine(fare) {
  * Problem-02 : Clean & Capitalize Characters
  */
 
-function  onlyCharacter(str) {
+function onlyCharacter(str) {
     if (typeof str !== 'string') {
         return 'invalid';
     }
     let result = '';
     for (const char of str) {
-        if (char >= 'A' && char <= 'Z' || char >= 'a' && char <= 'z') {
+        if (char !== ' ') {
             result = result + char;
         }
     }
     return result.toUpperCase();
 }
+
+const output = onlyCharacter();
+console.log(output);
+
 
 
 /** 
